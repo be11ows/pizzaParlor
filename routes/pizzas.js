@@ -1,18 +1,24 @@
 const express = require('express')
 const router = express.Router()
+const Pizza = require('../models/pizza');
 
 // get all pizzas
 router.get('/', (req, res) => {
   res.send('get pizzas')
 })
 
-// add an pizza to db
+// add a pizza to db
 router.post('/', (req, res) => {
   res.send('add pizza')
 })
 
+// display pizza
+router.get('/:id', (req, res) => {
+  res.send('display a pizza');
+})
+
 // edit pizza
-router.put('/:id', (req, res) => {
+router.put('/:id/edit', (req, res) => {
   res.send('pizza edit')
 })
 

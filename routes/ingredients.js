@@ -1,14 +1,20 @@
 const express = require('express')
 const router = express.Router()
+const Ingredient = require('../models/ingredient');
 
 // get all ingredients
 router.get('/', (req, res) => {
-  res.send('get ingredients')
+  res.render('ingredients/index')
+})
+
+// add an ingredient to db
+router.get('/new', (req, res) => {
+  res.send('ingredients/new')
 })
 
 // add an ingredient to db
 router.post('/', (req, res) => {
-  res.send('add ingredient')
+  res.send('create')
 })
 
 // edit ingredient
